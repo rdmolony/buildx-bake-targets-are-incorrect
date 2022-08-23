@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  external:
+    image: hello-world
+  internal:
+    build:
+      context: .
+      target: valid
+    depends_on:
+      - external
